@@ -1,0 +1,127 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f1eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    background-color: #76BDB7;
+    width: 400px;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+.header {
+    background-color: #17b8d8;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header img
+{
+    width: 20%;
+    height: auto;
+}
+
+/* Chat Area */
+.chat {
+    flex: 1; /* Makes the chat area grow and fill the remaining space */
+    padding: 15px;
+    background-color: #ece5dd;
+    overflow-y: auto; /* Enables scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align messages from the top */
+    gap: 10px; /* Adds space between messages */
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+.message.you {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+}
+
+.message.server {
+    align-self: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #ffffff;
+    /* Removed absolute positioning */
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-area button {
+    background-color: #17B8D8;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-area button:hover {
+    background-color: #054d44;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        height: 80vh;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    .input-area input {
+        font-size: 12px;
+    }
+}
